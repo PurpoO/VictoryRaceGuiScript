@@ -1,0 +1,183 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local VictoryRaceGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("ScrollingFrame")
+local GuiText = Instance.new("TextLabel")
+local Apply = Instance.new("TextButton")
+local SpeedHere = Instance.new("TextBox")
+local Speed7500 = Instance.new("TextButton")
+local Speed5000 = Instance.new("TextButton")
+local Speed2500 = Instance.new("TextButton")
+local InsertText = Instance.new("TextLabel")
+
+--Properties:
+
+VictoryRaceGui.Name = "VictoryRaceGui"
+VictoryRaceGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+VictoryRaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+VictoryRaceGui.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = VictoryRaceGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MainFrame.BorderSizePixel = 3
+MainFrame.Size = UDim2.new(0, 311, 0, 282)
+MainFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+MainFrame.ScrollBarThickness = 10
+
+GuiText.Name = "GuiText"
+GuiText.Parent = MainFrame
+GuiText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GuiText.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GuiText.BorderSizePixel = 3
+GuiText.Size = UDim2.new(0, 298, 0, 60)
+GuiText.Font = Enum.Font.Gotham
+GuiText.Text = "Victory Race Gui"
+GuiText.TextColor3 = Color3.fromRGB(255, 255, 255)
+GuiText.TextScaled = true
+GuiText.TextSize = 14.000
+GuiText.TextWrapped = true
+
+Apply.Name = "Apply"
+Apply.Parent = MainFrame
+Apply.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Apply.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Apply.BorderSizePixel = 3
+Apply.Position = UDim2.new(0, 0, 0.140845686, 0)
+Apply.Size = UDim2.new(0, 122, 0, 50)
+Apply.Font = Enum.Font.Gotham
+Apply.Text = "Apply"
+Apply.TextColor3 = Color3.fromRGB(255, 255, 255)
+Apply.TextScaled = true
+Apply.TextSize = 14.000
+Apply.TextWrapped = true
+
+SpeedHere.Name = "SpeedHere"
+SpeedHere.Parent = MainFrame
+SpeedHere.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpeedHere.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SpeedHere.BorderSizePixel = 3
+SpeedHere.Position = UDim2.new(0.559485555, 0, 0.140845686, 0)
+SpeedHere.Size = UDim2.new(0, 124, 0, 50)
+SpeedHere.Font = Enum.Font.Gotham
+SpeedHere.Text = "Speed Here"
+SpeedHere.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedHere.TextScaled = true
+SpeedHere.TextSize = 14.000
+SpeedHere.TextWrapped = true
+
+Speed7500.Name = "Speed7500"
+Speed7500.Parent = MainFrame
+Speed7500.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed7500.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Speed7500.BorderSizePixel = 3
+Speed7500.Position = UDim2.new(0.28295821, 0, 0.428483397, 0)
+Speed7500.Size = UDim2.new(0, 122, 0, 50)
+Speed7500.Font = Enum.Font.Gotham
+Speed7500.Text = "Speed +7500"
+Speed7500.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed7500.TextScaled = true
+Speed7500.TextSize = 14.000
+Speed7500.TextWrapped = true
+
+Speed5000.Name = "Speed5000"
+Speed5000.Parent = MainFrame
+Speed5000.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed5000.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Speed5000.BorderSizePixel = 3
+Speed5000.Position = UDim2.new(0.559485495, 0, 0.341580093, 0)
+Speed5000.Size = UDim2.new(0, 122, 0, 50)
+Speed5000.Font = Enum.Font.Gotham
+Speed5000.Text = "Speed +5000"
+Speed5000.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed5000.TextScaled = true
+Speed5000.TextSize = 14.000
+Speed5000.TextWrapped = true
+
+Speed2500.Name = "Speed2500"
+Speed2500.Parent = MainFrame
+Speed2500.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed2500.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Speed2500.BorderSizePixel = 3
+Speed2500.Position = UDim2.new(0, 0, 0.341580063, 0)
+Speed2500.Size = UDim2.new(0, 122, 0, 50)
+Speed2500.Font = Enum.Font.Gotham
+Speed2500.Text = "Speed +2500"
+Speed2500.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed2500.TextScaled = true
+Speed2500.TextSize = 14.000
+Speed2500.TextWrapped = true
+
+InsertText.Name = "InsertText"
+InsertText.Parent = MainFrame
+InsertText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InsertText.BorderColor3 = Color3.fromRGB(255, 0, 0)
+InsertText.BorderSizePixel = 3
+InsertText.Position = UDim2.new(0.18649517, 0, 0.567837954, 0)
+InsertText.Size = UDim2.new(0, 182, 0, 61)
+InsertText.Font = Enum.Font.Gotham
+InsertText.Text = "Gui Visible/Invisible = Insert"
+InsertText.TextColor3 = Color3.fromRGB(255, 255, 255)
+InsertText.TextScaled = true
+InsertText.TextSize = 14.000
+InsertText.TextWrapped = true
+
+-- Scripts:
+
+local function SFFITR_fake_script() -- Apply.Apply 
+	local script = Instance.new('LocalScript', Apply)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = script.Parent.Parent.SpeedHere.Text
+		game.Players.LocalPlayer.leaderstats.Speed.Value = script.Parent.Parent.SpeedHere.Text
+	end)
+end
+coroutine.wrap(SFFITR_fake_script)()
+local function OKVGQ_fake_script() -- Speed7500.Speed 
+	local script = Instance.new('LocalScript', Speed7500)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed += 7500
+		game.Players.LocalPlayer.leaderstats.Speed.Value += 7500
+	end)
+end
+coroutine.wrap(OKVGQ_fake_script)()
+local function YRNBQ_fake_script() -- Speed5000.Speed 
+	local script = Instance.new('LocalScript', Speed5000)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed += 5000
+		game.Players.LocalPlayer.leaderstats.Speed.Value += 5000
+	end)
+end
+coroutine.wrap(YRNBQ_fake_script)()
+local function LFSW_fake_script() -- Speed2500.Speed 
+	local script = Instance.new('LocalScript', Speed2500)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed += 2500
+		game.Players.LocalPlayer.leaderstats.Speed.Value += 2500
+	end)
+end
+coroutine.wrap(LFSW_fake_script)()
+local function CEAXFIT_fake_script() -- InsertText.GuiOpenClose 
+	local script = Instance.new('LocalScript', InsertText)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:Connect(function(Input)
+		if Input.KeyCode == Enum.KeyCode.Insert then
+			if script.Parent.Parent.Visible == false then
+				script.Parent.Parent.Visible = true
+			else
+				script.Parent.Parent.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(CEAXFIT_fake_script)()
